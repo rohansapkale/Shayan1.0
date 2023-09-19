@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shayan</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                
+            }
+            body{
+                background-color: black;
+            }
+            .container{
+                width: 100%;
+                height: 100vh;
+                background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("Shayan bg4.jpg");
+                background-size:cover;
+                background-position:center;
+            }
+            .navbar{
+                width: 85%;
+                margin: auto;
+                padding: 35px 0px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+            }
+            .logo{
+                width: 120px;
+                cursor: pointer;
+                background-color: black;
+            }
+            .navbar ul li{
+                list-style: none;
+                display: inline-block;
+                margin: 0 20px;
+                position: relative;
+            }
+            .navbar ul li a{
+                text-decoration: none;
+                color: white;
+                text-transform: capitalize;
+                font-size: xx-large;
+
+            
+            }
+            #user-icon{
+                height: 40px;
+                filter: invert(1);
+                margin-right: -31px;
+                margin-top: -31px;
+                position: absolute;
+            }
+            .navbar ul li::after{
+                content: '';
+                height: 3px;
+                width: 0%;
+                background: #009688;
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                transition: 0.5s;
+            }
+            .navbar ul li:hover::after{
+                width:100%
+            }
+            .content{
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                text-align: center;
+                color: white;
+            }
+            .content h1{
+                font-size: 90px;
+                margin-top: 80px;
+
+            }
+            .content p{
+                margin: 20px auto;
+                font-weight: 100;
+                line-height: 23px;
+                font-size: x-large;
+            }
+            button{
+                width: 200px;
+                padding: 15px 0;
+                text-align: center;
+                margin: 20px 10px;
+                border-radius: 25px;
+                font-weight: bold;
+                border: 2px solid #009688;
+                background: transparent;
+                color: white;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+
+            }
+            span{
+                background: #009688;
+                height: 100%;
+                width: 0;
+                border-radius:25px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+                transition: 0.5s;
+            }
+            button:hover span{
+                width: 100%;
+
+            }
+            button:hover{
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <img src="logo2.png" bgcolor="" class="logo" alt="">
+                <ul>
+                    <li><img src="Shayan user.jpg" bgcolor="black" id="user-icon"></li>
+                    <li><a href="">Log in</a></li>
+                    <!-- <li><a href="">about</a></li>
+                    <li><a href="">contact us</a></li>
+                    <li><a href="">help</a></li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Welcome to Team Shayan</h1>
+            <p>We are here to give the solution for Ministry of Justice,<br>This is our project to solve the problem of case flow management in Indian court System <br></p>
+            <div>
+                <button type="button"><span></span>New Case</button>
+                <button type="button"><span></span>Track Case</button>
+            </div>
+        </div>
+    </body>
+</html>
